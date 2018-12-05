@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #2ecc71;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+#root {
+  max-width: 960px;
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 9px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  font-family: "Mountains of Christmas", cursive;
+  text-align: center;
+  background: #3487ef;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  padding: 20px 20px 100px 20px;
+
+  h1 {
+    font-size: 5.2rem;
+  }
+  p {
+    font-size: 3.2rem;
+  }
+}
+
+form {
+  background: #fff;
+  box-shadow: 0 9px 15px 0px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  top: -50px;
+
+  li {
+    display: flex;
+    justify-content: space-around;
+    input {
+      outline: 0;
+      font-size: 2rem;
+      padding: 10px;
+      border: 0;
+      width: 48%;
+    }
+    &:nth-child(odd) {
+      input {
+        border-bottom: 2px solid #3487ef;
+        &::placeholder {
+          color: rgba(52, 152, 219, 0.5);
+        }
+      }
+    }
+    &:nth-child(even) {
+      input {
+        border-bottom: 2px solid #e74c3c;
+        &::placeholder {
+          color: rgba(231, 76, 60, 0.5);
+        }
+      }
+    }
+    &:nth-child(3n) {
+      input {
+        border-bottom: 2px solid #2ecc71;
+        &::placeholder {
+          color: rgba(46, 204, 113, 0.5);
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .button-list {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      display: inline-block;
+      border: 0;
+      color: #fff;
+      width: 30%;
+      font-size: 2rem;
+      border-radius: 100px;
+      cursor: pointer;
+      padding: 1rem 0;
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+
+      &.btn-add {
+        background: #3487ef;
+      }
+      &.btn-send {
+        background: #2ecc71;
+      }
+    }
+  }
+}
+
+footer {
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  padding: 20px 0;
+  background: #2ecc71;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
